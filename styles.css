@@ -1,0 +1,156 @@
+.piece { position: absolute; left: var(--x); top: var(--y); width: var(--w); height: var(--h); z-index: var(--z); transform: translate(-50%, -50%) rotate(var(--r)); transform-origin: 50% 60%; pointer-events: none; }
+.piece img { display: block; width: 100%; height: 100%; object-fit: fill; user-select: none; }
+/* True PNG alpha, without bright shadows, blend modes or white backgrounds. */
+.bouquet.is-preparing .piece, .bouquet.is-preparing .wrapper, .bouquet.is-preparing .twine { opacity: 0; }
+/* The stem is revealed upwards in its own rotated coordinates: the base stays fixed. */
+.stem { transform-origin: 50% 50%; }
+.bouquet.is-assembling .stem img { animation: stem-grow 2450ms cubic-bezier(.4, 0, .22, 1) var(--delay) both; }
+@keyframes stem-grow {
+  from { clip-path: inset(100% 0 0); }
+  to { clip-path: inset(0 0 0); }
+}
+/* Each leaf grows and sways from the end of its own stalk, which sits on a stem. */
+.leaf img { transform-origin: 4.7% 87%; }
+.leaf[data-piece="hoja-izquierda"] img { transform-origin: 94.5% 93.5%; }
+.leaf[data-piece="hoja-pequena"] img { transform-origin: 25% 86.5%; }
+.calyx img { transform-origin: 50% 82%; }
+.bouquet.is-assembling .leaf img, .bouquet.is-assembling .calyx img { animation: leaf-unfurl 1400ms cubic-bezier(.2, .7, .25, 1) var(--delay) both; }
+@keyframes leaf-unfurl {
+  0% { opacity: 0; transform: scale(.02, .3) rotate(-15deg); }
+  16% { opacity: 1; }
+  100% { opacity: 1; transform: scale(1) rotate(0); }
+}
+/* Fifteen overlapping masks per rose reveal the original petals without editing the PNG. */
+.corolla, .petal-layer, .petal-slice { display: block; position: absolute; inset: 0; }
+.corolla { transform-origin: 50% 90%; perspective: 420px; perspective-origin: 52% 46%; }
+.petal-layer { transform-origin: 52% 46%; backface-visibility: visible; }
+.bouquet.is-assembling .corolla { animation: flower-rise 3200ms cubic-bezier(.22, .7, .25, 1) var(--delay) both; }
+.bouquet.is-assembling .petal-layer { animation: petal-unfold 1900ms cubic-bezier(.2, .6, .22, 1) calc(var(--delay) + var(--petal-delay)) both; }
+.bouquet.is-assembling .petal-layer.inner { animation-name: petal-unfold-inner; }
+@keyframes flower-rise {
+  from { transform: scale(.27, .4); }
+  to { transform: scale(1); }
+}
+/* In 3D, every petal starts standing up towards the viewer, closed over the
+   centre, and opens outwards around the tangent of the rose with a small overshoot. */
+@keyframes petal-unfold {
+  0% { opacity: 0; transform: rotate3d(var(--ax), var(--ay), 0, 82deg) scale(.5) rotate(var(--twist)); }
+  22% { opacity: 1; }
+  72% { transform: rotate3d(var(--ax), var(--ay), 0, -9deg) scale(1.03) rotate(0deg); }
+  100% { opacity: 1; transform: rotate3d(var(--ax), var(--ay), 0, 0deg) scale(1) rotate(0deg); }
+}
+@keyframes petal-unfold-inner {
+  0% { opacity: 0; transform: rotate3d(var(--ax), var(--ay), 0, 64deg) scale(.42) rotate(var(--twist)); }
+  25% { opacity: 1; }
+  75% { transform: rotate3d(var(--ax), var(--ay), 0, -5deg) scale(1.02) rotate(0deg); }
+  100% { opacity: 1; transform: rotate3d(var(--ax), var(--ay), 0, 0deg) scale(1) rotate(0deg); }
+}
+.bud { display: none; position: absolute; left: 30%; top: 20%; width: 40%; height: 70%; z-index: 2; transform-origin: 50% 95%; }
+.bouquet.is-assembling .bud { display: block; animation: bud-open 1800ms cubic-bezier(.3, .5, .2, 1) var(--delay) both; }
+@keyframes bud-open {
+  0% { opacity: 0; transform: scale(.55, .7) rotate(-8deg); }
+  22% { opacity: 1; transform: scale(.9, 1) rotate(-3deg); }
+  53% { opacity: .9; transform: scale(1.15, .9) rotate(13deg); }
+  100% { opacity: 0; transform: translate(17%, 9%) scale(1.4, .85) rotate(24deg); }
+}
+/* Loose petals tumble in 3D while they fall, like a real petal flipping in the air. */
+.bouquet.is-assembling .loose-petal { animation: petal-fall 2600ms cubic-bezier(.3, .1, .25, 1) var(--delay) both; }
+@keyframes petal-fall {
+  from { opacity: 0; transform: translate(calc(-50% + var(--dx)), calc(-50% + var(--dy))) perspective(300px) rotate(calc(var(--r) - 40deg)) rotateX(250deg) rotateY(160deg) scale(.92); }
+  15% { opacity: 1; }
+  45% { transform: translate(calc(-50% + var(--dx) * .45), calc(-50% + var(--dy) * .5)) perspective(300px) rotate(calc(var(--r) + 18deg)) rotateX(120deg) rotateY(70deg) scale(1); }
+  80% { transform: translate(calc(-50% - var(--dx) * .08), -50%) perspective(300px) rotate(calc(var(--r) - 6deg)) rotateX(25deg) rotateY(-12deg) scale(1); }
+  to { opacity: 1; transform: translate(-50%, -50%) perspective(300px) rotate(var(--r)) rotateX(0deg) rotateY(0deg) scale(1); }
+}
+/* All three flaps use the same generated parchment image, with different folds. */
+.wrapper { position: absolute; left: 21%; top: 52%; width: 59.5%; height: 42.5%; perspective: 800px; pointer-events: none; }
+.wrapper-back { z-index: 0; }
+.wrapper-front { z-index: 20; }
+.paper { position: absolute; inset: 0; transform-origin: 51% 88%; }
+.paper img { display: block; width: 100%; height: 100%; object-fit: cover; }
+.paper-back { clip-path: polygon(0% 8%, 28% 0%, 50% 10%, 78% 0%, 100% 12%, 59% 100%, 42% 100%); }
+.paper-back img { filter: brightness(.89) saturate(.92); }
+.paper-left { clip-path: polygon(0% 8%, 60% 39%, 62% 100%, 42% 100%); transform-origin: 52% 86%; }
+.paper-left img { filter: brightness(.97); }
+.paper-right { clip-path: polygon(100% 12%, 59% 100%, 42% 100%, 39% 46%); transform-origin: 49% 87%; }
+.paper-right img { filter: brightness(1.015); }
+.bouquet.is-assembling .paper-back { animation: paper-lift 1300ms cubic-bezier(.2, .75, .25, 1) 6400ms both; }
+.bouquet.is-assembling .paper-left { animation: wrap-left 1800ms cubic-bezier(.25, .7, .2, 1) 7100ms both; }
+.bouquet.is-assembling .paper-right { animation: wrap-right 1800ms cubic-bezier(.25, .7, .2, 1) 7700ms both; }
+@keyframes paper-lift {
+  0% { opacity: 0; transform: translateY(32%) scale(.85) rotateX(24deg); }
+  25% { opacity: 1; }
+  100% { opacity: 1; transform: translateY(0) scale(1) rotateX(0); }
+}
+@keyframes wrap-left {
+  0% { opacity: 0; transform: translateX(-27%) rotateY(-105deg) rotateZ(-21deg); }
+  12% { opacity: 1; }
+  75% { transform: translateX(1%) rotateY(5deg) rotateZ(1deg); }
+  100% { opacity: 1; transform: translateX(0) rotateY(0) rotateZ(0); }
+}
+@keyframes wrap-right {
+  0% { opacity: 0; transform: translateX(28%) rotateY(108deg) rotateZ(22deg); }
+  12% { opacity: 1; }
+  78% { transform: translateX(-1%) rotateY(-4deg) rotateZ(-1deg); }
+  100% { opacity: 1; transform: translateX(0) rotateY(0) rotateZ(0); }
+}
+.twine { position: absolute; left: 43%; top: 81.5%; width: 16%; height: 10%; z-index: 21; stroke: #806240; stroke-width: 1.7; stroke-linecap: round; stroke-linejoin: round; pointer-events: none; }
+.bouquet.is-assembling .twine { animation: tie-appear 400ms ease 9200ms both; }
+.bouquet.is-assembling .twine path { animation: tie-draw 850ms ease 9200ms both; }
+@keyframes tie-appear { from { opacity: 0; } to { opacity: 1; } }
+@keyframes tie-draw { from { stroke-dasharray: 1; stroke-dashoffset: 1; } to { stroke-dasharray: 1; stroke-dashoffset: 0; } }
+
+
+:root { color-scheme: light; font-family: "Segoe UI", Arial, sans-serif; background: #e9eef6; color: #1f3258; }
+* { box-sizing: border-box; }
+body { margin: 0; min-width: 280px; min-height: 100svh; background: radial-gradient(ellipse at 30% 16%, #f6f8fc 0, #edf1f8 43%, #e1e8f3 100%); background-attachment: fixed; }
+[hidden] { display: none !important; }
+.petal-definitions { position: absolute; pointer-events: none; }
+.scene { position: relative; width: min(100%, 1320px); min-height: max(100svh, 640px); margin: 0 auto; padding: 16px 16px 76px; display: flex; flex-direction: column; align-items: center; justify-content: center; overflow: clip; isolation: isolate; }
+.artwork { position: relative; width: min(640px, 92vw, calc((100svh - 110px) * .78)); min-width: 260px; aspect-ratio: 640 / 820; margin: 0; z-index: 2; }
+.botanical-orbit { position: absolute; width: 100%; height: auto; aspect-ratio: 1; left: 0; top: 10%; overflow: visible; transform: rotate(-110deg); }
+.orbit-line { stroke: #8494b4; stroke-width: .16; opacity: .38; }
+.js .scene:not(.is-started) .orbit-line { opacity: 0; }
+.scene.is-started .orbit-line { animation: orbit-draw 2600ms cubic-bezier(.2, .6, .3, 1) both; }
+@keyframes orbit-draw { from { stroke-dasharray: 1; stroke-dashoffset: 1; opacity: 0; } to { stroke-dasharray: 1; stroke-dashoffset: 0; opacity: .38; } }
+.bouquet { position: relative; width: 100%; height: 100%; isolation: isolate; transform-origin: 51% 91%; }
+.scene.is-living .bouquet { animation: bouquet-breathe 7400ms ease-in-out infinite; }
+.scene.is-living .flower .corolla { animation: rose-breathe 6200ms ease-in-out var(--sway, 0ms) infinite alternate; }
+.scene.is-living .leaf img { animation: leaf-breeze 5600ms ease-in-out var(--sway, 0ms) infinite alternate; }
+@keyframes bouquet-breathe { 0%, 100% { transform: rotate(0); } 35% { transform: rotate(.55deg); } 76% { transform: rotate(-.4deg); } }
+@keyframes rose-breathe { 0% { transform: rotate(0) scale(1); } 45% { transform: rotate(-.6deg) scale(.998); } 100% { transform: rotate(.65deg) scale(1.005); } }
+@keyframes leaf-breeze { from { transform: rotate(0); } to { transform: rotate(1.5deg); } }
+.scene.is-breeze-paused .bouquet, .scene.is-breeze-paused .corolla, .scene.is-breeze-paused .leaf img { animation-play-state: paused !important; }
+.scene.is-suspended *, .scene.is-suspended *::before, .scene.is-suspended *::after { animation-play-state: paused !important; }
+.controls { position: absolute; left: 50%; bottom: 18px; transform: translateX(-50%); z-index: 6; display: flex; align-items: center; justify-content: center; gap: 22px; white-space: nowrap; }
+.controls button { font: 12px "Segoe UI", Arial, sans-serif; letter-spacing: .3px; color: #4b5c7d; border: 0; border-bottom: 1px solid #c3cde0; background: transparent; padding: 12px 4px; min-height: 44px; cursor: pointer; transition: color 200ms, border-color 200ms, transform 200ms; }
+.controls button:hover { color: #1f3258; border-color: #5f6f92; transform: translateY(-1px); }
+.controls button:active { transform: translateY(1px); }
+.controls button:focus-visible { outline: 2px solid #5f6f92; outline-offset: 4px; }
+.controls span { font-size: 17px; vertical-align: -1px; padding-right: 7px; }
+.loading { position: absolute; left: 50%; top: 50%; transform: translate(-50%, -50%); z-index: 8; margin: 0; display: flex; flex-direction: column; align-items: center; gap: 15px; font-size: 12px; letter-spacing: .6px; color: #4b5c7d; animation: fade-in 700ms ease both; }
+.loading-dots { display: flex; gap: 7px; }
+.loading-dots i { width: 7px; height: 7px; border-radius: 50%; background: #9fadc9; animation: dot-pulse 1400ms ease-in-out infinite; }
+.loading-dots i:nth-child(2) { animation-delay: 230ms; }
+.loading-dots i:nth-child(3) { animation-delay: 460ms; }
+@keyframes fade-in { from { opacity: 0; } to { opacity: 1; } }
+@keyframes dot-pulse { 0%, 100% { opacity: .28; transform: scale(.72); } 45% { opacity: 1; transform: scale(1); } }
+.visually-hidden { position: absolute; width: 1px; height: 1px; overflow: hidden; clip-path: inset(50%); }
+.status-error { position: absolute; left: 10%; right: 10%; bottom: 70px; text-align: center; font-size: 14px; }
+.no-script { position: absolute; bottom: 6px; width: 100%; text-align: center; font-size: 12px; }
+/* El sonido solo puede empezar tras un toque, asi que el regalo se abre con uno. */
+.opener { position: absolute; left: 50%; top: 50%; z-index: 9; width: 168px; height: 168px; transform: translate(-50%, -50%); border: 1px solid #b9c6de; border-radius: 50%; background: radial-gradient(circle at 50% 40%, #ffffffd9, #eef2f9cc); color: #1f3a6e; font: 15px "Segoe Print", "Bradley Hand", "Comic Sans MS", cursive; letter-spacing: -.2px; cursor: pointer; box-shadow: 0 14px 34px #2449a01f; animation: fade-in 700ms ease both; transition: transform 300ms cubic-bezier(.2, .7, .25, 1), box-shadow 300ms; }
+.opener:hover { transform: translate(-50%, -50%) scale(1.04); box-shadow: 0 18px 40px #2449a02e; }
+.opener:active { transform: translate(-50%, -50%) scale(.97); }
+.opener:focus-visible { outline: 2px solid #5f6f92; outline-offset: 6px; }
+.opener-ring { position: absolute; inset: -10px; border-radius: 50%; border: 1px solid #2449a055; animation: ring-pulse 2400ms ease-out infinite; pointer-events: none; }
+@keyframes ring-pulse { from { opacity: .9; transform: scale(.94); } to { opacity: 0; transform: scale(1.22); } }
+@media (max-width: 700px) {
+  .artwork { width: min(96vw, 470px, calc((100svh - 110px) * .78)); }
+}
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after { animation: none !important; transition: none !important; }
+  .bouquet.is-preparing .piece, .bouquet.is-preparing .wrapper, .bouquet.is-preparing .twine { opacity: 1; }
+  #breeze { display: none; }
+  .bud { display: none !important; }
+}

@@ -1,0 +1,612 @@
+<!doctype html>
+<html lang="es">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#e9eef6">
+  <meta name="description" content="Un ramo.">
+  <title>:3</title>
+  <script>document.documentElement.classList.add('js');</script>
+  <link rel="stylesheet" href="styles.css">
+  <script src="app.js" defer></script>
+</head>
+
+<body>
+  <svg class="petal-definitions" width="0" height="0" aria-hidden="true">
+    <defs>
+      <clipPath id="petal-heart" clipPathUnits="objectBoundingBox">
+        <circle cx=".52" cy=".46" r=".148" />
+      </clipPath>
+      <clipPath id="petal-inner-0" clipPathUnits="objectBoundingBox">
+        <path
+          d="M0.50288,0.33820 Q0.44339,0.24951 0.47477,0.13816 A0.325,0.325 0 0 1 0.82133,0.33825 Q0.74060,0.42110 0.63404,0.41392 A0.123,0.123 0 0 0 0.50288,0.33820 Z" />
+      </clipPath>
+      <clipPath id="petal-inner-1" clipPathUnits="objectBoundingBox">
+        <path
+          d="M0.61693,0.38427 Q0.66398,0.28841 0.77610,0.25991 A0.325,0.325 0 0 1 0.77610,0.66009 Q0.66398,0.63159 0.61693,0.53573 A0.123,0.123 0 0 0 0.61693,0.38427 Z" />
+      </clipPath>
+      <clipPath id="petal-inner-2" clipPathUnits="objectBoundingBox">
+        <path
+          d="M0.63404,0.50608 Q0.74060,0.49890 0.82133,0.58175 A0.325,0.325 0 0 1 0.47477,0.78184 Q0.44339,0.67049 0.50288,0.58180 A0.123,0.123 0 0 0 0.63404,0.50608 Z" />
+      </clipPath>
+      <clipPath id="petal-inner-3" clipPathUnits="objectBoundingBox">
+        <path
+          d="M0.53712,0.58180 Q0.59661,0.67049 0.56523,0.78184 A0.325,0.325 0 0 1 0.21867,0.58175 Q0.29940,0.49890 0.40596,0.50608 A0.123,0.123 0 0 0 0.53712,0.58180 Z" />
+      </clipPath>
+      <clipPath id="petal-inner-4" clipPathUnits="objectBoundingBox">
+        <path
+          d="M0.42307,0.53573 Q0.37602,0.63159 0.26390,0.66009 A0.325,0.325 0 0 1 0.26390,0.25991 Q0.37602,0.28841 0.42307,0.38427 A0.123,0.123 0 0 0 0.42307,0.53573 Z" />
+      </clipPath>
+      <clipPath id="petal-inner-5" clipPathUnits="objectBoundingBox">
+        <path
+          d="M0.40596,0.41392 Q0.29940,0.42110 0.21867,0.33825 A0.325,0.325 0 0 1 0.56523,0.13816 Q0.59661,0.24951 0.53712,0.33820 A0.123,0.123 0 0 0 0.40596,0.41392 Z" />
+      </clipPath>
+      <clipPath id="petal-outer-0" clipPathUnits="objectBoundingBox">
+        <path
+          d="M0.48242,0.19263 Q0.32505,-0.07562 0.39892,-0.40153 A0.87,0.87 0 0 1 1.21481,-0.06358 Q1.03660,0.21911 0.73563,0.29751 A0.27,0.27 0 0 0 0.48242,0.19263 Z" />
+      </clipPath>
+      <clipPath id="petal-outer-1" clipPathUnits="objectBoundingBox">
+        <path
+          d="M0.68249,0.24437 Q0.76089,-0.05660 1.04358,-0.23481 A0.87,0.87 0 0 1 1.38153,0.58108 Q1.05562,0.65495 0.78737,0.49758 A0.27,0.27 0 0 0 0.68249,0.24437 Z" />
+      </clipPath>
+      <clipPath id="petal-outer-2" clipPathUnits="objectBoundingBox">
+        <path
+          d="M0.78737,0.42242 Q1.05562,0.26505 1.38153,0.33892 A0.87,0.87 0 0 1 1.04358,1.15481 Q0.76089,0.97660 0.68249,0.67563 A0.27,0.27 0 0 0 0.78737,0.42242 Z" />
+      </clipPath>
+      <clipPath id="petal-outer-3" clipPathUnits="objectBoundingBox">
+        <path
+          d="M0.73563,0.62249 Q1.03660,0.70089 1.21481,0.98358 A0.87,0.87 0 0 1 0.39892,1.32153 Q0.32505,0.99562 0.48242,0.72737 A0.27,0.27 0 0 0 0.73563,0.62249 Z" />
+      </clipPath>
+      <clipPath id="petal-outer-4" clipPathUnits="objectBoundingBox">
+        <path
+          d="M0.55758,0.72737 Q0.71495,0.99562 0.64108,1.32153 A0.87,0.87 0 0 1 -0.17481,0.98358 Q0.00340,0.70089 0.30437,0.62249 A0.27,0.27 0 0 0 0.55758,0.72737 Z" />
+      </clipPath>
+      <clipPath id="petal-outer-5" clipPathUnits="objectBoundingBox">
+        <path
+          d="M0.35751,0.67563 Q0.27911,0.97660 -0.00358,1.15481 A0.87,0.87 0 0 1 -0.34153,0.33892 Q-0.01562,0.26505 0.25263,0.42242 A0.27,0.27 0 0 0 0.35751,0.67563 Z" />
+      </clipPath>
+      <clipPath id="petal-outer-6" clipPathUnits="objectBoundingBox">
+        <path
+          d="M0.25263,0.49758 Q-0.01562,0.65495 -0.34153,0.58108 A0.87,0.87 0 0 1 -0.00358,-0.23481 Q0.27911,-0.05660 0.35751,0.24437 A0.27,0.27 0 0 0 0.25263,0.49758 Z" />
+      </clipPath>
+      <clipPath id="petal-outer-7" clipPathUnits="objectBoundingBox">
+        <path
+          d="M0.30437,0.29751 Q0.00340,0.21911 -0.17481,-0.06358 A0.87,0.87 0 0 1 0.64108,-0.40153 Q0.71495,-0.07562 0.55758,0.19263 A0.27,0.27 0 0 0 0.30437,0.29751 Z" />
+      </clipPath>
+    </defs>
+  </svg>
+  <main class="scene" id="scene" aria-label="Un ramo de rosas azules">
+    <button type="button" class="opener" id="opener" hidden><span class="opener-ring" aria-hidden="true"></span>Toca
+      para abrir</button>
+    <audio id="music" src="assets/musica.mp3" preload="auto"></audio>
+    <p class="loading" id="loading" hidden><span class="loading-dots"
+        aria-hidden="true"><i></i><i></i><i></i></span>Preparando tu ramito</p>
+
+    <figure class="artwork" aria-label="Ramo de rosas azules">
+      <svg class="botanical-orbit" viewBox="0 0 100 100" fill="none" aria-hidden="true">
+        <circle class="orbit-line" cx="50" cy="50" r="48" pathLength="1" />
+      </svg>
+      <div class="bouquet" id="bouquet" role="img"
+        aria-label="Ocho rosas azules de tallos largos, envueltas en papel antiguo y atadas con un cordel.">
+        <span class="piece stem"
+          style="--x:51.1500%;--y:56.2500%;--w:32.3696%;--h:75.7922%;--r:0deg;--z:1;--delay:350ms;--dx:0px;--dy:0px"
+          data-piece="tallo"><img src="assets/tallo.png" alt="" width="207" height="621" draggable="false"></span>
+        <span class="piece stem"
+          style="--x:58.9000%;--y:59.7500%;--w:29.7554%;--h:69.6713%;--r:11deg;--z:2;--delay:710ms;--dx:0px;--dy:0px"
+          data-piece="tallo"><img src="assets/tallo.png" alt="" width="190" height="571" draggable="false"></span>
+        <span class="piece stem"
+          style="--x:43.4000%;--y:60.5000%;--w:28.9961%;--h:67.8932%;--r:-10deg;--z:3;--delay:620ms;--dx:0px;--dy:0px"
+          data-piece="tallo"><img src="assets/tallo.png" alt="" width="186" height="557" draggable="false"></span>
+        <span class="piece stem"
+          style="--x:51.1500%;--y:62.2500%;--w:26.9373%;--h:63.0727%;--r:1deg;--z:1;--delay:180ms;--dx:0px;--dy:0px"
+          data-piece="tallo"><img src="assets/tallo.png" alt="" width="172" height="517" draggable="false"></span>
+        <span class="piece stem"
+          style="--x:57.6500%;--y:66.2500%;--w:23.8117%;--h:55.7542%;--r:12deg;--z:2;--delay:690ms;--dx:0px;--dy:0px"
+          data-piece="tallo"><img src="assets/tallo.png" alt="" width="152" height="457" draggable="false"></span>
+        <span class="piece stem"
+          style="--x:65.4000%;--y:67.0000%;--w:24.8759%;--h:58.2460%;--r:25deg;--z:3;--delay:1300ms;--dx:0px;--dy:0px"
+          data-piece="tallo"><img src="assets/tallo.png" alt="" width="159" height="478" draggable="false"></span>
+        <span class="piece stem"
+          style="--x:44.6500%;--y:67.2500%;--w:22.8266%;--h:53.4477%;--r:-11deg;--z:1;--delay:560ms;--dx:0px;--dy:0px"
+          data-piece="tallo"><img src="assets/tallo.png" alt="" width="146" height="438" draggable="false"></span>
+        <span class="piece stem"
+          style="--x:36.1500%;--y:68.0000%;--w:24.0701%;--h:56.3593%;--r:-25deg;--z:2;--delay:1270ms;--dx:0px;--dy:0px"
+          data-piece="tallo"><img src="assets/tallo.png" alt="" width="154" height="462" draggable="false"></span>
+        <span class="piece leaf"
+          style="--x:13.7727%;--y:43.5729%;--sway:-2800ms;--w:24.0000%;--h:18.7317%;--r:-8deg;--z:4;--delay:1400ms;--dx:0px;--dy:0px"
+          data-piece="hoja-izquierda"><img src="assets/hoja-izquierda.png" alt="" width="154" height="154"
+            draggable="false"></span>
+        <span class="piece leaf"
+          style="--x:86.9230%;--y:43.2346%;--w:23.0000%;--h:17.9512%;--r:6deg;--z:4;--delay:1550ms;--dx:0px;--dy:0px"
+          data-piece="hoja-derecha"><img src="assets/hoja-derecha.png" alt="" width="147" height="147"
+            draggable="false"></span>
+        <span class="piece leaf"
+          style="--x:31.5607%;--y:45.1486%;--sway:-1200ms;--w:23.0000%;--h:17.9512%;--r:4deg;--z:5;--delay:1700ms;--dx:0px;--dy:0px"
+          data-piece="hoja-izquierda"><img src="assets/hoja-izquierda.png" alt="" width="147" height="147"
+            draggable="false"></span>
+        <span class="piece leaf"
+          style="--x:71.2682%;--y:45.3026%;--sway:-3600ms;--w:23.0000%;--h:17.9512%;--r:-4deg;--z:5;--delay:1850ms;--dx:0px;--dy:0px"
+          data-piece="hoja-derecha"><img src="assets/hoja-derecha.png" alt="" width="147" height="147"
+            draggable="false"></span>
+        <span class="piece leaf"
+          style="--x:54.5499%;--y:41.5443%;--sway:-2800ms;--w:17.0000%;--h:13.2683%;--r:-12deg;--z:6;--delay:2000ms;--dx:0px;--dy:0px"
+          data-piece="hoja-pequena"><img src="assets/hoja-pequena.png" alt="" width="109" height="109"
+            draggable="false"></span>
+        <span class="piece leaf"
+          style="--x:45.3735%;--y:49.5038%;--w:16.0000%;--h:12.4878%;--r:12deg;--z:6;--delay:2150ms;--dx:0px;--dy:0px"
+          data-piece="hoja-izquierda"><img src="assets/hoja-izquierda.png" alt="" width="102" height="102"
+            draggable="false"></span>
+        <span class="piece leaf"
+          style="--x:38.0172%;--y:51.4894%;--sway:-1700ms;--w:15.0000%;--h:11.7073%;--r:18deg;--z:4;--delay:1100ms;--dx:0px;--dy:0px"
+          data-piece="hoja-izquierda"><img src="assets/hoja-izquierda.png" alt="" width="96" height="96"
+            draggable="false"></span>
+        <span class="piece leaf"
+          style="--x:63.0000%;--y:52.6337%;--sway:-900ms;--w:16.0000%;--h:12.4878%;--r:-6deg;--z:4;--delay:1250ms;--dx:0px;--dy:0px"
+          data-piece="hoja-pequena"><img src="assets/hoja-pequena.png" alt="" width="102" height="102"
+            draggable="false"></span>
+        <span class="piece calyx"
+          style="--x:36.0000%;--y:29.5520%;--w:18.0000%;--h:12.0398%;--r:-14deg;--z:7;--delay:2600ms;--dx:0px;--dy:0px"
+          data-piece="sepalos"><img src="assets/sepalos.png" alt="" width="115" height="99" draggable="false"></span>
+        <span class="piece calyx"
+          style="--x:67.0000%;--y:28.0520%;--w:18.0000%;--h:12.0398%;--r:14deg;--z:7;--delay:2750ms;--dx:0px;--dy:0px"
+          data-piece="sepalos"><img src="assets/sepalos.png" alt="" width="115" height="99" draggable="false"></span>
+        <span class="piece calyx"
+          style="--x:51.5000%;--y:21.4888%;--w:19.2000%;--h:12.8425%;--r:-3deg;--z:7;--delay:2450ms;--dx:0px;--dy:0px"
+          data-piece="sepalos"><img src="assets/sepalos.png" alt="" width="123" height="105" draggable="false"></span>
+        <span class="piece calyx"
+          style="--x:21.5000%;--y:44.5520%;--w:18.0000%;--h:12.0398%;--r:-27deg;--z:8;--delay:2950ms;--dx:0px;--dy:0px"
+          data-piece="sepalos"><img src="assets/sepalos.png" alt="" width="115" height="99" draggable="false"></span>
+        <span class="piece calyx"
+          style="--x:80.0000%;--y:42.3336%;--w:17.4000%;--h:11.6385%;--r:25deg;--z:8;--delay:3100ms;--dx:0px;--dy:0px"
+          data-piece="sepalos"><img src="assets/sepalos.png" alt="" width="111" height="95" draggable="false"></span>
+        <span class="piece calyx"
+          style="--x:38.5000%;--y:43.7072%;--w:19.8000%;--h:13.2438%;--r:-11deg;--z:8;--delay:2300ms;--dx:0px;--dy:0px"
+          data-piece="sepalos"><img src="assets/sepalos.png" alt="" width="127" height="109" draggable="false"></span>
+        <span class="piece calyx"
+          style="--x:64.5000%;--y:41.7072%;--w:19.8000%;--h:13.2438%;--r:10deg;--z:8;--delay:2550ms;--dx:0px;--dy:0px"
+          data-piece="sepalos"><img src="assets/sepalos.png" alt="" width="127" height="109" draggable="false"></span>
+        <span class="piece calyx"
+          style="--x:51.5000%;--y:34.7992%;--w:22.8000%;--h:15.2504%;--r:-4deg;--z:9;--delay:2100ms;--dx:0px;--dy:0px"
+          data-piece="sepalos"><img src="assets/sepalos.png" alt="" width="146" height="125" draggable="false"></span>
+        <span class="piece flower"
+          style="--x:36.0000%;--y:23.0000%;--sway:-1400ms;--w:30.0000%;--h:23.4146%;--r:-14deg;--z:9;--delay:3000ms;--dx:0px;--dy:0px"
+          data-piece="rosa-azul"><span class="corolla"><span class="petal-layer outer"
+              style="--petal-delay:850ms;--twist:12deg;--ax:-0.940;--ay:-0.341"><span class="petal-slice"
+                style="clip-path:url(#petal-outer-0)"><img src="assets/rosa-azul.png" alt="" width="192" height="192"
+                  draggable="false"></span></span><span class="petal-layer outer"
+              style="--petal-delay:955ms;--twist:-12deg;--ax:-0.424;--ay:-0.906"><span class="petal-slice"
+                style="clip-path:url(#petal-outer-1)"><img src="assets/rosa-azul.png" alt="" width="192" height="192"
+                  draggable="false"></span></span><span class="petal-layer outer"
+              style="--petal-delay:1060ms;--twist:12deg;--ax:0.341;--ay:-0.940"><span class="petal-slice"
+                style="clip-path:url(#petal-outer-2)"><img src="assets/rosa-azul.png" alt="" width="192" height="192"
+                  draggable="false"></span></span><span class="petal-layer outer"
+              style="--petal-delay:1165ms;--twist:-12deg;--ax:0.906;--ay:-0.424"><span class="petal-slice"
+                style="clip-path:url(#petal-outer-3)"><img src="assets/rosa-azul.png" alt="" width="192" height="192"
+                  draggable="false"></span></span><span class="petal-layer outer"
+              style="--petal-delay:1270ms;--twist:12deg;--ax:0.940;--ay:0.341"><span class="petal-slice"
+                style="clip-path:url(#petal-outer-4)"><img src="assets/rosa-azul.png" alt="" width="192" height="192"
+                  draggable="false"></span></span><span class="petal-layer outer"
+              style="--petal-delay:1375ms;--twist:-12deg;--ax:0.424;--ay:0.906"><span class="petal-slice"
+                style="clip-path:url(#petal-outer-5)"><img src="assets/rosa-azul.png" alt="" width="192" height="192"
+                  draggable="false"></span></span><span class="petal-layer outer"
+              style="--petal-delay:1480ms;--twist:12deg;--ax:-0.341;--ay:0.940"><span class="petal-slice"
+                style="clip-path:url(#petal-outer-6)"><img src="assets/rosa-azul.png" alt="" width="192" height="192"
+                  draggable="false"></span></span><span class="petal-layer outer"
+              style="--petal-delay:1585ms;--twist:-12deg;--ax:-0.906;--ay:0.424"><span class="petal-slice"
+                style="clip-path:url(#petal-outer-7)"><img src="assets/rosa-azul.png" alt="" width="192" height="192"
+                  draggable="false"></span></span><span class="petal-layer inner"
+              style="--petal-delay:250ms;--twist:8deg;--ax:-0.899;--ay:-0.439"><span class="petal-slice"
+                style="clip-path:url(#petal-inner-0)"><img src="assets/rosa-azul.png" alt="" width="192" height="192"
+                  draggable="false"></span></span><span class="petal-layer inner"
+              style="--petal-delay:365ms;--twist:-8deg;--ax:-0.069;--ay:-0.998"><span class="petal-slice"
+                style="clip-path:url(#petal-inner-1)"><img src="assets/rosa-azul.png" alt="" width="192" height="192"
+                  draggable="false"></span></span><span class="petal-layer inner"
+              style="--petal-delay:480ms;--twist:8deg;--ax:0.829;--ay:-0.559"><span class="petal-slice"
+                style="clip-path:url(#petal-inner-2)"><img src="assets/rosa-azul.png" alt="" width="192" height="192"
+                  draggable="false"></span></span><span class="petal-layer inner"
+              style="--petal-delay:595ms;--twist:-8deg;--ax:0.899;--ay:0.439"><span class="petal-slice"
+                style="clip-path:url(#petal-inner-3)"><img src="assets/rosa-azul.png" alt="" width="192" height="192"
+                  draggable="false"></span></span><span class="petal-layer inner"
+              style="--petal-delay:710ms;--twist:8deg;--ax:0.069;--ay:0.998"><span class="petal-slice"
+                style="clip-path:url(#petal-inner-4)"><img src="assets/rosa-azul.png" alt="" width="192" height="192"
+                  draggable="false"></span></span><span class="petal-layer inner"
+              style="--petal-delay:825ms;--twist:-8deg;--ax:-0.829;--ay:0.559"><span class="petal-slice"
+                style="clip-path:url(#petal-inner-5)"><img src="assets/rosa-azul.png" alt="" width="192" height="192"
+                  draggable="false"></span></span><span class="petal-layer heart"
+              style="--petal-delay:0ms;--twist:8deg;--ax:1;--ay:0"><span class="petal-slice"
+                style="clip-path:url(#petal-heart)"><img src="assets/rosa-azul.png" alt="" width="192" height="192"
+                  draggable="false"></span></span><span class="bud"><img src="assets/petalo-curvo-azul.png" alt=""
+                draggable="false"></span></span></span>
+        <span class="piece flower"
+          style="--x:67.0000%;--y:21.5000%;--sway:-3300ms;--w:30.0000%;--h:23.4146%;--r:14deg;--z:9;--delay:3150ms;--dx:0px;--dy:0px"
+          data-piece="rosa-azul"><span class="corolla"><span class="petal-layer outer"
+              style="--petal-delay:850ms;--twist:12deg;--ax:-0.940;--ay:-0.341"><span class="petal-slice"
+                style="clip-path:url(#petal-outer-0)"><img src="assets/rosa-azul.png" alt="" width="192" height="192"
+                  draggable="false"></span></span><span class="petal-layer outer"
+              style="--petal-delay:955ms;--twist:-12deg;--ax:-0.424;--ay:-0.906"><span class="petal-slice"
+                style="clip-path:url(#petal-outer-1)"><img src="assets/rosa-azul.png" alt="" width="192" height="192"
+                  draggable="false"></span></span><span class="petal-layer outer"
+              style="--petal-delay:1060ms;--twist:12deg;--ax:0.341;--ay:-0.940"><span class="petal-slice"
+                style="clip-path:url(#petal-outer-2)"><img src="assets/rosa-azul.png" alt="" width="192" height="192"
+                  draggable="false"></span></span><span class="petal-layer outer"
+              style="--petal-delay:1165ms;--twist:-12deg;--ax:0.906;--ay:-0.424"><span class="petal-slice"
+                style="clip-path:url(#petal-outer-3)"><img src="assets/rosa-azul.png" alt="" width="192" height="192"
+                  draggable="false"></span></span><span class="petal-layer outer"
+              style="--petal-delay:1270ms;--twist:12deg;--ax:0.940;--ay:0.341"><span class="petal-slice"
+                style="clip-path:url(#petal-outer-4)"><img src="assets/rosa-azul.png" alt="" width="192" height="192"
+                  draggable="false"></span></span><span class="petal-layer outer"
+              style="--petal-delay:1375ms;--twist:-12deg;--ax:0.424;--ay:0.906"><span class="petal-slice"
+                style="clip-path:url(#petal-outer-5)"><img src="assets/rosa-azul.png" alt="" width="192" height="192"
+                  draggable="false"></span></span><span class="petal-layer outer"
+              style="--petal-delay:1480ms;--twist:12deg;--ax:-0.341;--ay:0.940"><span class="petal-slice"
+                style="clip-path:url(#petal-outer-6)"><img src="assets/rosa-azul.png" alt="" width="192" height="192"
+                  draggable="false"></span></span><span class="petal-layer outer"
+              style="--petal-delay:1585ms;--twist:-12deg;--ax:-0.906;--ay:0.424"><span class="petal-slice"
+                style="clip-path:url(#petal-outer-7)"><img src="assets/rosa-azul.png" alt="" width="192" height="192"
+                  draggable="false"></span></span><span class="petal-layer inner"
+              style="--petal-delay:250ms;--twist:8deg;--ax:-0.899;--ay:-0.439"><span class="petal-slice"
+                style="clip-path:url(#petal-inner-0)"><img src="assets/rosa-azul.png" alt="" width="192" height="192"
+                  draggable="false"></span></span><span class="petal-layer inner"
+              style="--petal-delay:365ms;--twist:-8deg;--ax:-0.069;--ay:-0.998"><span class="petal-slice"
+                style="clip-path:url(#petal-inner-1)"><img src="assets/rosa-azul.png" alt="" width="192" height="192"
+                  draggable="false"></span></span><span class="petal-layer inner"
+              style="--petal-delay:480ms;--twist:8deg;--ax:0.829;--ay:-0.559"><span class="petal-slice"
+                style="clip-path:url(#petal-inner-2)"><img src="assets/rosa-azul.png" alt="" width="192" height="192"
+                  draggable="false"></span></span><span class="petal-layer inner"
+              style="--petal-delay:595ms;--twist:-8deg;--ax:0.899;--ay:0.439"><span class="petal-slice"
+                style="clip-path:url(#petal-inner-3)"><img src="assets/rosa-azul.png" alt="" width="192" height="192"
+                  draggable="false"></span></span><span class="petal-layer inner"
+              style="--petal-delay:710ms;--twist:8deg;--ax:0.069;--ay:0.998"><span class="petal-slice"
+                style="clip-path:url(#petal-inner-4)"><img src="assets/rosa-azul.png" alt="" width="192" height="192"
+                  draggable="false"></span></span><span class="petal-layer inner"
+              style="--petal-delay:825ms;--twist:-8deg;--ax:-0.829;--ay:0.559"><span class="petal-slice"
+                style="clip-path:url(#petal-inner-5)"><img src="assets/rosa-azul.png" alt="" width="192" height="192"
+                  draggable="false"></span></span><span class="petal-layer heart"
+              style="--petal-delay:0ms;--twist:8deg;--ax:1;--ay:0"><span class="petal-slice"
+                style="clip-path:url(#petal-heart)"><img src="assets/rosa-azul.png" alt="" width="192" height="192"
+                  draggable="false"></span></span><span class="bud"><img src="assets/petalo-curvo-azul.png" alt=""
+                draggable="false"></span></span></span>
+        <span class="piece flower"
+          style="--x:51.5000%;--y:14.5000%;--sway:-600ms;--w:32.0000%;--h:25.0000%;--r:-3deg;--z:10;--delay:2850ms;--dx:0px;--dy:0px"
+          data-piece="rosa-azul"><span class="corolla"><span class="petal-layer outer"
+              style="--petal-delay:850ms;--twist:12deg;--ax:-0.940;--ay:-0.341"><span class="petal-slice"
+                style="clip-path:url(#petal-outer-0)"><img src="assets/rosa-azul.png" alt="" width="205" height="205"
+                  draggable="false"></span></span><span class="petal-layer outer"
+              style="--petal-delay:955ms;--twist:-12deg;--ax:-0.424;--ay:-0.906"><span class="petal-slice"
+                style="clip-path:url(#petal-outer-1)"><img src="assets/rosa-azul.png" alt="" width="205" height="205"
+                  draggable="false"></span></span><span class="petal-layer outer"
+              style="--petal-delay:1060ms;--twist:12deg;--ax:0.341;--ay:-0.940"><span class="petal-slice"
+                style="clip-path:url(#petal-outer-2)"><img src="assets/rosa-azul.png" alt="" width="205" height="205"
+                  draggable="false"></span></span><span class="petal-layer outer"
+              style="--petal-delay:1165ms;--twist:-12deg;--ax:0.906;--ay:-0.424"><span class="petal-slice"
+                style="clip-path:url(#petal-outer-3)"><img src="assets/rosa-azul.png" alt="" width="205" height="205"
+                  draggable="false"></span></span><span class="petal-layer outer"
+              style="--petal-delay:1270ms;--twist:12deg;--ax:0.940;--ay:0.341"><span class="petal-slice"
+                style="clip-path:url(#petal-outer-4)"><img src="assets/rosa-azul.png" alt="" width="205" height="205"
+                  draggable="false"></span></span><span class="petal-layer outer"
+              style="--petal-delay:1375ms;--twist:-12deg;--ax:0.424;--ay:0.906"><span class="petal-slice"
+                style="clip-path:url(#petal-outer-5)"><img src="assets/rosa-azul.png" alt="" width="205" height="205"
+                  draggable="false"></span></span><span class="petal-layer outer"
+              style="--petal-delay:1480ms;--twist:12deg;--ax:-0.341;--ay:0.940"><span class="petal-slice"
+                style="clip-path:url(#petal-outer-6)"><img src="assets/rosa-azul.png" alt="" width="205" height="205"
+                  draggable="false"></span></span><span class="petal-layer outer"
+              style="--petal-delay:1585ms;--twist:-12deg;--ax:-0.906;--ay:0.424"><span class="petal-slice"
+                style="clip-path:url(#petal-outer-7)"><img src="assets/rosa-azul.png" alt="" width="205" height="205"
+                  draggable="false"></span></span><span class="petal-layer inner"
+              style="--petal-delay:250ms;--twist:8deg;--ax:-0.899;--ay:-0.439"><span class="petal-slice"
+                style="clip-path:url(#petal-inner-0)"><img src="assets/rosa-azul.png" alt="" width="205" height="205"
+                  draggable="false"></span></span><span class="petal-layer inner"
+              style="--petal-delay:365ms;--twist:-8deg;--ax:-0.069;--ay:-0.998"><span class="petal-slice"
+                style="clip-path:url(#petal-inner-1)"><img src="assets/rosa-azul.png" alt="" width="205" height="205"
+                  draggable="false"></span></span><span class="petal-layer inner"
+              style="--petal-delay:480ms;--twist:8deg;--ax:0.829;--ay:-0.559"><span class="petal-slice"
+                style="clip-path:url(#petal-inner-2)"><img src="assets/rosa-azul.png" alt="" width="205" height="205"
+                  draggable="false"></span></span><span class="petal-layer inner"
+              style="--petal-delay:595ms;--twist:-8deg;--ax:0.899;--ay:0.439"><span class="petal-slice"
+                style="clip-path:url(#petal-inner-3)"><img src="assets/rosa-azul.png" alt="" width="205" height="205"
+                  draggable="false"></span></span><span class="petal-layer inner"
+              style="--petal-delay:710ms;--twist:8deg;--ax:0.069;--ay:0.998"><span class="petal-slice"
+                style="clip-path:url(#petal-inner-4)"><img src="assets/rosa-azul.png" alt="" width="205" height="205"
+                  draggable="false"></span></span><span class="petal-layer inner"
+              style="--petal-delay:825ms;--twist:-8deg;--ax:-0.829;--ay:0.559"><span class="petal-slice"
+                style="clip-path:url(#petal-inner-5)"><img src="assets/rosa-azul.png" alt="" width="205" height="205"
+                  draggable="false"></span></span><span class="petal-layer heart"
+              style="--petal-delay:0ms;--twist:8deg;--ax:1;--ay:0"><span class="petal-slice"
+                style="clip-path:url(#petal-heart)"><img src="assets/rosa-azul.png" alt="" width="205" height="205"
+                  draggable="false"></span></span><span class="bud"><img src="assets/petalo-curvo-azul.png" alt=""
+                draggable="false"></span></span></span>
+        <span class="piece flower"
+          style="--x:21.5000%;--y:38.0000%;--sway:-2500ms;--w:30.0000%;--h:23.4146%;--r:-27deg;--z:11;--delay:3350ms;--dx:0px;--dy:0px"
+          data-piece="rosa-azul"><span class="corolla"><span class="petal-layer outer"
+              style="--petal-delay:850ms;--twist:12deg;--ax:-0.940;--ay:-0.341"><span class="petal-slice"
+                style="clip-path:url(#petal-outer-0)"><img src="assets/rosa-azul.png" alt="" width="192" height="192"
+                  draggable="false"></span></span><span class="petal-layer outer"
+              style="--petal-delay:955ms;--twist:-12deg;--ax:-0.424;--ay:-0.906"><span class="petal-slice"
+                style="clip-path:url(#petal-outer-1)"><img src="assets/rosa-azul.png" alt="" width="192" height="192"
+                  draggable="false"></span></span><span class="petal-layer outer"
+              style="--petal-delay:1060ms;--twist:12deg;--ax:0.341;--ay:-0.940"><span class="petal-slice"
+                style="clip-path:url(#petal-outer-2)"><img src="assets/rosa-azul.png" alt="" width="192" height="192"
+                  draggable="false"></span></span><span class="petal-layer outer"
+              style="--petal-delay:1165ms;--twist:-12deg;--ax:0.906;--ay:-0.424"><span class="petal-slice"
+                style="clip-path:url(#petal-outer-3)"><img src="assets/rosa-azul.png" alt="" width="192" height="192"
+                  draggable="false"></span></span><span class="petal-layer outer"
+              style="--petal-delay:1270ms;--twist:12deg;--ax:0.940;--ay:0.341"><span class="petal-slice"
+                style="clip-path:url(#petal-outer-4)"><img src="assets/rosa-azul.png" alt="" width="192" height="192"
+                  draggable="false"></span></span><span class="petal-layer outer"
+              style="--petal-delay:1375ms;--twist:-12deg;--ax:0.424;--ay:0.906"><span class="petal-slice"
+                style="clip-path:url(#petal-outer-5)"><img src="assets/rosa-azul.png" alt="" width="192" height="192"
+                  draggable="false"></span></span><span class="petal-layer outer"
+              style="--petal-delay:1480ms;--twist:12deg;--ax:-0.341;--ay:0.940"><span class="petal-slice"
+                style="clip-path:url(#petal-outer-6)"><img src="assets/rosa-azul.png" alt="" width="192" height="192"
+                  draggable="false"></span></span><span class="petal-layer outer"
+              style="--petal-delay:1585ms;--twist:-12deg;--ax:-0.906;--ay:0.424"><span class="petal-slice"
+                style="clip-path:url(#petal-outer-7)"><img src="assets/rosa-azul.png" alt="" width="192" height="192"
+                  draggable="false"></span></span><span class="petal-layer inner"
+              style="--petal-delay:250ms;--twist:8deg;--ax:-0.899;--ay:-0.439"><span class="petal-slice"
+                style="clip-path:url(#petal-inner-0)"><img src="assets/rosa-azul.png" alt="" width="192" height="192"
+                  draggable="false"></span></span><span class="petal-layer inner"
+              style="--petal-delay:365ms;--twist:-8deg;--ax:-0.069;--ay:-0.998"><span class="petal-slice"
+                style="clip-path:url(#petal-inner-1)"><img src="assets/rosa-azul.png" alt="" width="192" height="192"
+                  draggable="false"></span></span><span class="petal-layer inner"
+              style="--petal-delay:480ms;--twist:8deg;--ax:0.829;--ay:-0.559"><span class="petal-slice"
+                style="clip-path:url(#petal-inner-2)"><img src="assets/rosa-azul.png" alt="" width="192" height="192"
+                  draggable="false"></span></span><span class="petal-layer inner"
+              style="--petal-delay:595ms;--twist:-8deg;--ax:0.899;--ay:0.439"><span class="petal-slice"
+                style="clip-path:url(#petal-inner-3)"><img src="assets/rosa-azul.png" alt="" width="192" height="192"
+                  draggable="false"></span></span><span class="petal-layer inner"
+              style="--petal-delay:710ms;--twist:8deg;--ax:0.069;--ay:0.998"><span class="petal-slice"
+                style="clip-path:url(#petal-inner-4)"><img src="assets/rosa-azul.png" alt="" width="192" height="192"
+                  draggable="false"></span></span><span class="petal-layer inner"
+              style="--petal-delay:825ms;--twist:-8deg;--ax:-0.829;--ay:0.559"><span class="petal-slice"
+                style="clip-path:url(#petal-inner-5)"><img src="assets/rosa-azul.png" alt="" width="192" height="192"
+                  draggable="false"></span></span><span class="petal-layer heart"
+              style="--petal-delay:0ms;--twist:8deg;--ax:1;--ay:0"><span class="petal-slice"
+                style="clip-path:url(#petal-heart)"><img src="assets/rosa-azul.png" alt="" width="192" height="192"
+                  draggable="false"></span></span><span class="bud"><img src="assets/petalo-curvo-azul.png" alt=""
+                draggable="false"></span></span></span>
+        <span class="piece flower"
+          style="--x:80.0000%;--y:36.0000%;--sway:-4100ms;--w:29.0000%;--h:22.6829%;--r:25deg;--z:11;--delay:3500ms;--dx:0px;--dy:0px"
+          data-piece="rosa-azul"><span class="corolla"><span class="petal-layer outer"
+              style="--petal-delay:850ms;--twist:12deg;--ax:-0.940;--ay:-0.341"><span class="petal-slice"
+                style="clip-path:url(#petal-outer-0)"><img src="assets/rosa-azul.png" alt="" width="186" height="186"
+                  draggable="false"></span></span><span class="petal-layer outer"
+              style="--petal-delay:955ms;--twist:-12deg;--ax:-0.424;--ay:-0.906"><span class="petal-slice"
+                style="clip-path:url(#petal-outer-1)"><img src="assets/rosa-azul.png" alt="" width="186" height="186"
+                  draggable="false"></span></span><span class="petal-layer outer"
+              style="--petal-delay:1060ms;--twist:12deg;--ax:0.341;--ay:-0.940"><span class="petal-slice"
+                style="clip-path:url(#petal-outer-2)"><img src="assets/rosa-azul.png" alt="" width="186" height="186"
+                  draggable="false"></span></span><span class="petal-layer outer"
+              style="--petal-delay:1165ms;--twist:-12deg;--ax:0.906;--ay:-0.424"><span class="petal-slice"
+                style="clip-path:url(#petal-outer-3)"><img src="assets/rosa-azul.png" alt="" width="186" height="186"
+                  draggable="false"></span></span><span class="petal-layer outer"
+              style="--petal-delay:1270ms;--twist:12deg;--ax:0.940;--ay:0.341"><span class="petal-slice"
+                style="clip-path:url(#petal-outer-4)"><img src="assets/rosa-azul.png" alt="" width="186" height="186"
+                  draggable="false"></span></span><span class="petal-layer outer"
+              style="--petal-delay:1375ms;--twist:-12deg;--ax:0.424;--ay:0.906"><span class="petal-slice"
+                style="clip-path:url(#petal-outer-5)"><img src="assets/rosa-azul.png" alt="" width="186" height="186"
+                  draggable="false"></span></span><span class="petal-layer outer"
+              style="--petal-delay:1480ms;--twist:12deg;--ax:-0.341;--ay:0.940"><span class="petal-slice"
+                style="clip-path:url(#petal-outer-6)"><img src="assets/rosa-azul.png" alt="" width="186" height="186"
+                  draggable="false"></span></span><span class="petal-layer outer"
+              style="--petal-delay:1585ms;--twist:-12deg;--ax:-0.906;--ay:0.424"><span class="petal-slice"
+                style="clip-path:url(#petal-outer-7)"><img src="assets/rosa-azul.png" alt="" width="186" height="186"
+                  draggable="false"></span></span><span class="petal-layer inner"
+              style="--petal-delay:250ms;--twist:8deg;--ax:-0.899;--ay:-0.439"><span class="petal-slice"
+                style="clip-path:url(#petal-inner-0)"><img src="assets/rosa-azul.png" alt="" width="186" height="186"
+                  draggable="false"></span></span><span class="petal-layer inner"
+              style="--petal-delay:365ms;--twist:-8deg;--ax:-0.069;--ay:-0.998"><span class="petal-slice"
+                style="clip-path:url(#petal-inner-1)"><img src="assets/rosa-azul.png" alt="" width="186" height="186"
+                  draggable="false"></span></span><span class="petal-layer inner"
+              style="--petal-delay:480ms;--twist:8deg;--ax:0.829;--ay:-0.559"><span class="petal-slice"
+                style="clip-path:url(#petal-inner-2)"><img src="assets/rosa-azul.png" alt="" width="186" height="186"
+                  draggable="false"></span></span><span class="petal-layer inner"
+              style="--petal-delay:595ms;--twist:-8deg;--ax:0.899;--ay:0.439"><span class="petal-slice"
+                style="clip-path:url(#petal-inner-3)"><img src="assets/rosa-azul.png" alt="" width="186" height="186"
+                  draggable="false"></span></span><span class="petal-layer inner"
+              style="--petal-delay:710ms;--twist:8deg;--ax:0.069;--ay:0.998"><span class="petal-slice"
+                style="clip-path:url(#petal-inner-4)"><img src="assets/rosa-azul.png" alt="" width="186" height="186"
+                  draggable="false"></span></span><span class="petal-layer inner"
+              style="--petal-delay:825ms;--twist:-8deg;--ax:-0.829;--ay:0.559"><span class="petal-slice"
+                style="clip-path:url(#petal-inner-5)"><img src="assets/rosa-azul.png" alt="" width="186" height="186"
+                  draggable="false"></span></span><span class="petal-layer heart"
+              style="--petal-delay:0ms;--twist:8deg;--ax:1;--ay:0"><span class="petal-slice"
+                style="clip-path:url(#petal-heart)"><img src="assets/rosa-azul.png" alt="" width="186" height="186"
+                  draggable="false"></span></span><span class="bud"><img src="assets/petalo-curvo-azul.png" alt=""
+                draggable="false"></span></span></span>
+        <span class="piece flower"
+          style="--x:38.5000%;--y:36.5000%;--sway:-1900ms;--w:33.0000%;--h:25.7317%;--r:-11deg;--z:12;--delay:2700ms;--dx:0px;--dy:0px"
+          data-piece="rosa-azul"><span class="corolla"><span class="petal-layer outer"
+              style="--petal-delay:850ms;--twist:12deg;--ax:-0.940;--ay:-0.341"><span class="petal-slice"
+                style="clip-path:url(#petal-outer-0)"><img src="assets/rosa-azul.png" alt="" width="211" height="211"
+                  draggable="false"></span></span><span class="petal-layer outer"
+              style="--petal-delay:955ms;--twist:-12deg;--ax:-0.424;--ay:-0.906"><span class="petal-slice"
+                style="clip-path:url(#petal-outer-1)"><img src="assets/rosa-azul.png" alt="" width="211" height="211"
+                  draggable="false"></span></span><span class="petal-layer outer"
+              style="--petal-delay:1060ms;--twist:12deg;--ax:0.341;--ay:-0.940"><span class="petal-slice"
+                style="clip-path:url(#petal-outer-2)"><img src="assets/rosa-azul.png" alt="" width="211" height="211"
+                  draggable="false"></span></span><span class="petal-layer outer"
+              style="--petal-delay:1165ms;--twist:-12deg;--ax:0.906;--ay:-0.424"><span class="petal-slice"
+                style="clip-path:url(#petal-outer-3)"><img src="assets/rosa-azul.png" alt="" width="211" height="211"
+                  draggable="false"></span></span><span class="petal-layer outer"
+              style="--petal-delay:1270ms;--twist:12deg;--ax:0.940;--ay:0.341"><span class="petal-slice"
+                style="clip-path:url(#petal-outer-4)"><img src="assets/rosa-azul.png" alt="" width="211" height="211"
+                  draggable="false"></span></span><span class="petal-layer outer"
+              style="--petal-delay:1375ms;--twist:-12deg;--ax:0.424;--ay:0.906"><span class="petal-slice"
+                style="clip-path:url(#petal-outer-5)"><img src="assets/rosa-azul.png" alt="" width="211" height="211"
+                  draggable="false"></span></span><span class="petal-layer outer"
+              style="--petal-delay:1480ms;--twist:12deg;--ax:-0.341;--ay:0.940"><span class="petal-slice"
+                style="clip-path:url(#petal-outer-6)"><img src="assets/rosa-azul.png" alt="" width="211" height="211"
+                  draggable="false"></span></span><span class="petal-layer outer"
+              style="--petal-delay:1585ms;--twist:-12deg;--ax:-0.906;--ay:0.424"><span class="petal-slice"
+                style="clip-path:url(#petal-outer-7)"><img src="assets/rosa-azul.png" alt="" width="211" height="211"
+                  draggable="false"></span></span><span class="petal-layer inner"
+              style="--petal-delay:250ms;--twist:8deg;--ax:-0.899;--ay:-0.439"><span class="petal-slice"
+                style="clip-path:url(#petal-inner-0)"><img src="assets/rosa-azul.png" alt="" width="211" height="211"
+                  draggable="false"></span></span><span class="petal-layer inner"
+              style="--petal-delay:365ms;--twist:-8deg;--ax:-0.069;--ay:-0.998"><span class="petal-slice"
+                style="clip-path:url(#petal-inner-1)"><img src="assets/rosa-azul.png" alt="" width="211" height="211"
+                  draggable="false"></span></span><span class="petal-layer inner"
+              style="--petal-delay:480ms;--twist:8deg;--ax:0.829;--ay:-0.559"><span class="petal-slice"
+                style="clip-path:url(#petal-inner-2)"><img src="assets/rosa-azul.png" alt="" width="211" height="211"
+                  draggable="false"></span></span><span class="petal-layer inner"
+              style="--petal-delay:595ms;--twist:-8deg;--ax:0.899;--ay:0.439"><span class="petal-slice"
+                style="clip-path:url(#petal-inner-3)"><img src="assets/rosa-azul.png" alt="" width="211" height="211"
+                  draggable="false"></span></span><span class="petal-layer inner"
+              style="--petal-delay:710ms;--twist:8deg;--ax:0.069;--ay:0.998"><span class="petal-slice"
+                style="clip-path:url(#petal-inner-4)"><img src="assets/rosa-azul.png" alt="" width="211" height="211"
+                  draggable="false"></span></span><span class="petal-layer inner"
+              style="--petal-delay:825ms;--twist:-8deg;--ax:-0.829;--ay:0.559"><span class="petal-slice"
+                style="clip-path:url(#petal-inner-5)"><img src="assets/rosa-azul.png" alt="" width="211" height="211"
+                  draggable="false"></span></span><span class="petal-layer heart"
+              style="--petal-delay:0ms;--twist:8deg;--ax:1;--ay:0"><span class="petal-slice"
+                style="clip-path:url(#petal-heart)"><img src="assets/rosa-azul.png" alt="" width="211" height="211"
+                  draggable="false"></span></span><span class="bud"><img src="assets/petalo-curvo-azul.png" alt=""
+                draggable="false"></span></span></span>
+        <span class="piece flower"
+          style="--x:64.5000%;--y:34.5000%;--sway:-800ms;--w:33.0000%;--h:25.7317%;--r:10deg;--z:12;--delay:2950ms;--dx:0px;--dy:0px"
+          data-piece="rosa-azul"><span class="corolla"><span class="petal-layer outer"
+              style="--petal-delay:850ms;--twist:12deg;--ax:-0.940;--ay:-0.341"><span class="petal-slice"
+                style="clip-path:url(#petal-outer-0)"><img src="assets/rosa-azul.png" alt="" width="211" height="211"
+                  draggable="false"></span></span><span class="petal-layer outer"
+              style="--petal-delay:955ms;--twist:-12deg;--ax:-0.424;--ay:-0.906"><span class="petal-slice"
+                style="clip-path:url(#petal-outer-1)"><img src="assets/rosa-azul.png" alt="" width="211" height="211"
+                  draggable="false"></span></span><span class="petal-layer outer"
+              style="--petal-delay:1060ms;--twist:12deg;--ax:0.341;--ay:-0.940"><span class="petal-slice"
+                style="clip-path:url(#petal-outer-2)"><img src="assets/rosa-azul.png" alt="" width="211" height="211"
+                  draggable="false"></span></span><span class="petal-layer outer"
+              style="--petal-delay:1165ms;--twist:-12deg;--ax:0.906;--ay:-0.424"><span class="petal-slice"
+                style="clip-path:url(#petal-outer-3)"><img src="assets/rosa-azul.png" alt="" width="211" height="211"
+                  draggable="false"></span></span><span class="petal-layer outer"
+              style="--petal-delay:1270ms;--twist:12deg;--ax:0.940;--ay:0.341"><span class="petal-slice"
+                style="clip-path:url(#petal-outer-4)"><img src="assets/rosa-azul.png" alt="" width="211" height="211"
+                  draggable="false"></span></span><span class="petal-layer outer"
+              style="--petal-delay:1375ms;--twist:-12deg;--ax:0.424;--ay:0.906"><span class="petal-slice"
+                style="clip-path:url(#petal-outer-5)"><img src="assets/rosa-azul.png" alt="" width="211" height="211"
+                  draggable="false"></span></span><span class="petal-layer outer"
+              style="--petal-delay:1480ms;--twist:12deg;--ax:-0.341;--ay:0.940"><span class="petal-slice"
+                style="clip-path:url(#petal-outer-6)"><img src="assets/rosa-azul.png" alt="" width="211" height="211"
+                  draggable="false"></span></span><span class="petal-layer outer"
+              style="--petal-delay:1585ms;--twist:-12deg;--ax:-0.906;--ay:0.424"><span class="petal-slice"
+                style="clip-path:url(#petal-outer-7)"><img src="assets/rosa-azul.png" alt="" width="211" height="211"
+                  draggable="false"></span></span><span class="petal-layer inner"
+              style="--petal-delay:250ms;--twist:8deg;--ax:-0.899;--ay:-0.439"><span class="petal-slice"
+                style="clip-path:url(#petal-inner-0)"><img src="assets/rosa-azul.png" alt="" width="211" height="211"
+                  draggable="false"></span></span><span class="petal-layer inner"
+              style="--petal-delay:365ms;--twist:-8deg;--ax:-0.069;--ay:-0.998"><span class="petal-slice"
+                style="clip-path:url(#petal-inner-1)"><img src="assets/rosa-azul.png" alt="" width="211" height="211"
+                  draggable="false"></span></span><span class="petal-layer inner"
+              style="--petal-delay:480ms;--twist:8deg;--ax:0.829;--ay:-0.559"><span class="petal-slice"
+                style="clip-path:url(#petal-inner-2)"><img src="assets/rosa-azul.png" alt="" width="211" height="211"
+                  draggable="false"></span></span><span class="petal-layer inner"
+              style="--petal-delay:595ms;--twist:-8deg;--ax:0.899;--ay:0.439"><span class="petal-slice"
+                style="clip-path:url(#petal-inner-3)"><img src="assets/rosa-azul.png" alt="" width="211" height="211"
+                  draggable="false"></span></span><span class="petal-layer inner"
+              style="--petal-delay:710ms;--twist:8deg;--ax:0.069;--ay:0.998"><span class="petal-slice"
+                style="clip-path:url(#petal-inner-4)"><img src="assets/rosa-azul.png" alt="" width="211" height="211"
+                  draggable="false"></span></span><span class="petal-layer inner"
+              style="--petal-delay:825ms;--twist:-8deg;--ax:-0.829;--ay:0.559"><span class="petal-slice"
+                style="clip-path:url(#petal-inner-5)"><img src="assets/rosa-azul.png" alt="" width="211" height="211"
+                  draggable="false"></span></span><span class="petal-layer heart"
+              style="--petal-delay:0ms;--twist:8deg;--ax:1;--ay:0"><span class="petal-slice"
+                style="clip-path:url(#petal-heart)"><img src="assets/rosa-azul.png" alt="" width="211" height="211"
+                  draggable="false"></span></span><span class="bud"><img src="assets/petalo-curvo-azul.png" alt=""
+                draggable="false"></span></span></span>
+        <span class="piece flower"
+          style="--x:51.5000%;--y:26.5000%;--w:38.0000%;--h:29.6341%;--r:-4deg;--z:13;--delay:2500ms;--dx:0px;--dy:0px"
+          data-piece="rosa-azul"><span class="corolla"><span class="petal-layer outer"
+              style="--petal-delay:850ms;--twist:12deg;--ax:-0.940;--ay:-0.341"><span class="petal-slice"
+                style="clip-path:url(#petal-outer-0)"><img src="assets/rosa-azul.png" alt="" width="243" height="243"
+                  draggable="false"></span></span><span class="petal-layer outer"
+              style="--petal-delay:955ms;--twist:-12deg;--ax:-0.424;--ay:-0.906"><span class="petal-slice"
+                style="clip-path:url(#petal-outer-1)"><img src="assets/rosa-azul.png" alt="" width="243" height="243"
+                  draggable="false"></span></span><span class="petal-layer outer"
+              style="--petal-delay:1060ms;--twist:12deg;--ax:0.341;--ay:-0.940"><span class="petal-slice"
+                style="clip-path:url(#petal-outer-2)"><img src="assets/rosa-azul.png" alt="" width="243" height="243"
+                  draggable="false"></span></span><span class="petal-layer outer"
+              style="--petal-delay:1165ms;--twist:-12deg;--ax:0.906;--ay:-0.424"><span class="petal-slice"
+                style="clip-path:url(#petal-outer-3)"><img src="assets/rosa-azul.png" alt="" width="243" height="243"
+                  draggable="false"></span></span><span class="petal-layer outer"
+              style="--petal-delay:1270ms;--twist:12deg;--ax:0.940;--ay:0.341"><span class="petal-slice"
+                style="clip-path:url(#petal-outer-4)"><img src="assets/rosa-azul.png" alt="" width="243" height="243"
+                  draggable="false"></span></span><span class="petal-layer outer"
+              style="--petal-delay:1375ms;--twist:-12deg;--ax:0.424;--ay:0.906"><span class="petal-slice"
+                style="clip-path:url(#petal-outer-5)"><img src="assets/rosa-azul.png" alt="" width="243" height="243"
+                  draggable="false"></span></span><span class="petal-layer outer"
+              style="--petal-delay:1480ms;--twist:12deg;--ax:-0.341;--ay:0.940"><span class="petal-slice"
+                style="clip-path:url(#petal-outer-6)"><img src="assets/rosa-azul.png" alt="" width="243" height="243"
+                  draggable="false"></span></span><span class="petal-layer outer"
+              style="--petal-delay:1585ms;--twist:-12deg;--ax:-0.906;--ay:0.424"><span class="petal-slice"
+                style="clip-path:url(#petal-outer-7)"><img src="assets/rosa-azul.png" alt="" width="243" height="243"
+                  draggable="false"></span></span><span class="petal-layer inner"
+              style="--petal-delay:250ms;--twist:8deg;--ax:-0.899;--ay:-0.439"><span class="petal-slice"
+                style="clip-path:url(#petal-inner-0)"><img src="assets/rosa-azul.png" alt="" width="243" height="243"
+                  draggable="false"></span></span><span class="petal-layer inner"
+              style="--petal-delay:365ms;--twist:-8deg;--ax:-0.069;--ay:-0.998"><span class="petal-slice"
+                style="clip-path:url(#petal-inner-1)"><img src="assets/rosa-azul.png" alt="" width="243" height="243"
+                  draggable="false"></span></span><span class="petal-layer inner"
+              style="--petal-delay:480ms;--twist:8deg;--ax:0.829;--ay:-0.559"><span class="petal-slice"
+                style="clip-path:url(#petal-inner-2)"><img src="assets/rosa-azul.png" alt="" width="243" height="243"
+                  draggable="false"></span></span><span class="petal-layer inner"
+              style="--petal-delay:595ms;--twist:-8deg;--ax:0.899;--ay:0.439"><span class="petal-slice"
+                style="clip-path:url(#petal-inner-3)"><img src="assets/rosa-azul.png" alt="" width="243" height="243"
+                  draggable="false"></span></span><span class="petal-layer inner"
+              style="--petal-delay:710ms;--twist:8deg;--ax:0.069;--ay:0.998"><span class="petal-slice"
+                style="clip-path:url(#petal-inner-4)"><img src="assets/rosa-azul.png" alt="" width="243" height="243"
+                  draggable="false"></span></span><span class="petal-layer inner"
+              style="--petal-delay:825ms;--twist:-8deg;--ax:-0.829;--ay:0.559"><span class="petal-slice"
+                style="clip-path:url(#petal-inner-5)"><img src="assets/rosa-azul.png" alt="" width="243" height="243"
+                  draggable="false"></span></span><span class="petal-layer heart"
+              style="--petal-delay:0ms;--twist:8deg;--ax:1;--ay:0"><span class="petal-slice"
+                style="clip-path:url(#petal-heart)"><img src="assets/rosa-azul.png" alt="" width="243" height="243"
+                  draggable="false"></span></span><span class="bud"><img src="assets/petalo-curvo-azul.png" alt=""
+                draggable="false"></span></span></span>
+        <span class="piece loose-petal"
+          style="--x:27.0000%;--y:92.0000%;--w:6.7000%;--h:6.6000%;--r:-68deg;--z:14;--delay:5700ms;--dx:-30px;--dy:-125px"
+          data-piece="petalo-abierto"><img src="assets/petalo-abierto-azul.png" alt="" width="43" height="54"
+            draggable="false"></span>
+        <span class="piece loose-petal"
+          style="--x:74.0000%;--y:83.0000%;--w:5.0000%;--h:4.9000%;--r:24deg;--z:14;--delay:5950ms;--dx:35px;--dy:-130px"
+          data-piece="petalo-curvo"><img src="assets/petalo-curvo-azul.png" alt="" width="32" height="40"
+            draggable="false"></span>
+        <span class="piece loose-petal"
+          style="--x:64.0000%;--y:95.0000%;--w:7.5000%;--h:7.3000%;--r:66deg;--z:14;--delay:6150ms;--dx:20px;--dy:-145px"
+          data-piece="petalo-ancho"><img src="assets/petalo-ancho-azul.png" alt="" width="48" height="60"
+            draggable="false"></span>
+        <span class="piece loose-petal"
+          style="--x:17.0000%;--y:78.0000%;--w:4.6000%;--h:4.5000%;--r:-30deg;--z:14;--delay:6350ms;--dx:-25px;--dy:-120px"
+          data-piece="petalo-curvo"><img src="assets/petalo-curvo-azul.png" alt="" width="29" height="37"
+            draggable="false"></span>
+        <span class="piece loose-petal"
+          style="--x:85.0000%;--y:92.0000%;--w:6.0000%;--h:5.9000%;--r:40deg;--z:14;--delay:6550ms;--dx:30px;--dy:-135px"
+          data-piece="petalo-abierto"><img src="assets/petalo-abierto-azul.png" alt="" width="38" height="48"
+            draggable="false"></span>
+
+        <div class="wrapper wrapper-back" aria-hidden="true">
+          <div class="paper paper-back"><img src="assets/papel-antiguo.png" alt="" draggable="false"></div>
+        </div>
+        <div class="wrapper wrapper-front" aria-hidden="true">
+          <div class="paper paper-left"><img src="assets/papel-antiguo.png" alt="" draggable="false"></div>
+          <div class="paper paper-right"><img src="assets/papel-antiguo.png" alt="" draggable="false"></div>
+        </div>
+        <svg class="twine" viewBox="0 0 100 80" fill="none" aria-hidden="true">
+          <path pathLength="1"
+            d="M24 20Q50 27 76 18M25 24Q50 29 75 22M50 25C29 2 11 11 29 25Q41 30 50 25C65 2 84 8 71 22Q62 29 50 25M50 25Q40 39 34 62M51 26Q68 40 63 58" />
+          <ellipse cx="50" cy="25" rx="4" ry="3" />
+        </svg>
+      </div>
+    </figure>
+
+    <div class="controls">
+      <button type="button" id="replay" hidden><span aria-hidden="true">↻</span> Volver a verlo</button>
+      <button type="button" id="breeze" aria-pressed="false" hidden>Sin brisa</button>
+      <button type="button" id="sound" aria-pressed="false" hidden>Silenciar</button>
+    </div>
+    <p id="status" class="visually-hidden" role="status" aria-live="polite"></p>
+    <noscript>
+      <p class="no-script">Para ver la animación, activa JavaScript en tu navegador.</p>
+    </noscript>
+  </main>
+</body>
+
+</html>
